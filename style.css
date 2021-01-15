@@ -1,0 +1,112 @@
+:root {
+  /* color */
+  --color-black: #3f454d;
+  --color-white: #ffffff;
+  --color-blue: #3b88c3;
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-light-grey: #dfdfdf;
+  --animation-duration: 300ms;
+  --base--space: 1vmin;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vmin;
+}
+
+.btn {
+  height: 7vmin;
+  margin-right: var(--base--space);
+  border-radius: calc(var(--base--space) * 2);
+  /* calc() 함수는 계산해주는 함수이다. 위에서 처럼 2vmin을 표현하고 싶을때 'base-space * 2' 처럼
+  사용하면 일일이 2vmin을 입력하지 않아도 되는 장점이 있다 */
+}
+
+.blueB {
+  background-color: var(--color-blue);
+}
+.pinkB {
+  background-color: var(--color-pink);
+}
+.yellowB {
+  background-color: var(--color-yellow);
+}
+
+.blueL,
+.pinkL,
+.yellowL {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.logo {
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+section {
+  color: var(--color-white);
+  display: grid;
+  grid-template-columns: repeat(6, 10vmin);
+  grid-template-rows: 13vmin;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: transform var(--animation-duration) ease;
+}
+
+button img {
+  width: 8vmin;
+}
+
+button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.list {
+  width: 70vmin;
+  overflow-y: scroll;
+  list-style: upper-alpha;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--base--space) * 2);
+  padding-left: var(--base--space);
+  margin-bottom: var(--base--space);
+  background-color: var(--color-white);
+  border-radius: calc(var(--base--space) * 2);
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul img {
+  width: 7vmin;
+}
+
+.non-visible {
+  display: none;
+}
