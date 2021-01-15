@@ -30,7 +30,7 @@ function onButton(event, items) {
   const data = event.target.dataset;
   const key = data.key;
   const value = data.value;
-  if (key === null || value === null) {
+  if (key == null || value == null) {
     return;
   }
   console.log(key, value);
